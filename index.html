@@ -1,127 +1,106 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>My Portfolio</title>
-		<link rel="icon" href="images/SS.png" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Saurav - Senior Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <div class="profile-image">
+                <img src="avatar.jpg" alt="Shubham Saurav">
+            </div>
+            <h1>Shubham Saurav</h1>
+            <p>Senior Software Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://gitlab.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-gitlab"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </header>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/SS.png" alt="" /></a>
-					<ul style="list-style-type: none;">
-						<h1><li><strong>Shubham Saurav</strong></li>
-						<li>Data Engineer II @ Knorex (current)</li>
-						<li>Software Engineer @ NRI Fintech</li>
-						<li><strong>Wanna learn it all kind!</strong></li></h1>
-					</ul>
-				</div>
-			</header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-		<!-- Main -->
-			<div id="main">
-				
-				<!-- One -->
-					<section id="one">
-						
-						<header class="major">
-							<h2>Hi There!
-							<img src="images/avatar.jpg" style="float:right;height:8em"/>
-							<br/>I am Shubham Saurav
-							</h2>
-							
-						</header>
-						<p>A working professional with overall experience of 3 years.<br/> Currently working as a Data Engineer II @ Knorex.<br/>This website is my portfolio. Have a look around </p>
-					</section>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Software Engineer with 6 years of experience in designing, developing, and deploying backend applications and data pipelines. Proficient in Golang, Java, and various related technologies.</p>
+            </section>
 
-					<section id="three">
-						<h2>Own work respositories</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/shubhvish4495/coronaChat-bot" target="_blank" class="image fit thumb"><img src="images/github.png" alt="" /></a>
-								<h3>Covid - Chatbot</h3>
-								<p>A chatbot aimed at integration with FB messenger to return covid cases per day district wise. Working example in this&nbsp<a href="https://www.linkedin.com/posts/shubham-saurav-a7ab89118_covid19-nlp-facebook-activity-6676213042096680960-oASa" target="_blank">LinkedIn post</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/shubhvish4495/VaccineTracker" target="_blank" class="image fit thumb"><img src="images/github.png" alt="" /></a>
-								<h3>Covid - Vaccine Tracker</h3>
-								<p>A REST based app to return availability of vaccines in your vicinity. Search using district ID. Search By District name(In progress)</p>
-							</article>
-						</div>
-					</section>
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="card-container">
+                    <div class="card" data-id="1">
+                        <h3>Redhat, Pune</h3>
+                        <p>Senior Software Engineer</p>
+                        <p>August 2021 - PRESENT</p>
+                    </div>
+                    <div class="card" data-id="2">
+                        <h3>Knorex, Pune</h3>
+                        <p>Data Engineer II</p>
+                        <p>Jan 2020 - July 2021</p>
+                    </div>
+                    <div class="card" data-id="3">
+                        <h3>NRI Fintech, Kolkata</h3>
+                        <p>Associate Software Developer</p>
+                        <p>August 2018 - January 2021</p>
+                    </div>
+                </div>
+            </section>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Certifications</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/spark-scala.jpg" class="image fit thumb"><img src="images/certifications/spark-scala.jpg" alt="" /></a>
-								<h3>Udemy - Spark-Scala</h3>
-								<p>A course on Apache spark with scala. Spark RDD, Spark SQL, Spark DF & Spark Streaming</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/certifications/golang.jpg" class="image fit thumb"><img src="images/certifications/golang.jpg" alt="" /></a>
-								<h3>Udemy - Golang</h3>
-								<p>A course on Golang. Go basics, Interface, GoRoutines</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/certifications/bigquery.png" class="image fit thumb"><img src="images/certifications/bigquery.png" alt="" /></a>
-								<h3>Quick Labs - Data Engineering GCP</h3>
-								<p>A course with hands on by qwick labs. Can view badge <a href= "https://www.qwiklabs.com/public_profiles/8401eaaa-383b-4ab0-8984-b6fe5899b544/badges/641280" target="_blank">here</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/certifications/bigquery.png" class="image fit thumb"><img src="images/certifications/bigquery.png" alt="" /></a>
-								<h3>Quick Labs - Insights from Bigquery </h3>
-								<p>A hands on course by qwick labs. Can view badge <a href= "https://www.qwiklabs.com/public_profiles/8401eaaa-383b-4ab0-8984-b6fe5899b544/badges/641280" target="_blank">here</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/certifications/coursera.png" class="image fit thumb"><img src="images/certifications/coursera.png" alt="" /></a>
-								<h3>Coursera - Machine Learning</h3>
-								<p>A course on Machine Learning basics by Andrew NG.</p>
-							</article>
-						</div>
-					</section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul class="skill-list">
+                    <li>Golang</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Spring Boot</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>SQL</li>
+                    <li>NoSQL</li>
+                    <li>RESTful APIs</li>
+                    <li>Microservices</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: shubhamsaurav001@gmail.com</p>
+                <p>Phone: +917076535948</p>
+                <p>Location: Pune, India</p>
+            </section>
+			<section id="resume">
+                <h2>Download Resume</h2>
+                <p>Download my resume to learn more about my qualifications and experience.</p>
+                <button id="downloadResume" class="download-btn">Download Resume</button>
+            </section>
+        </main>
 
-			</div>
+        <footer>
+            <p>&copy; 2024 Shubham Saurav. All rights reserved.</p>
+        </footer>
+    </div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li>shubhamsaurav001@gmail.com</li>
-					</ul>
-					<ul class="icons">
-						<li>+917076535948</li>
-					</ul>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/shubham-saurav-a7ab89118/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/shubhvish4495" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					</ul>
-					<ul class="icons">
-						<li><a href="assets/resume.pdf" target="_blank" class="button">Download Resume</a></li>
-					</ul>
-					<ul class="copyright">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-position"></p>
+            <p id="popup-date"></p>
+            <div id="popup-details"></div>
+        </div>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script src="script.js"></script>
+</body>
 </html>

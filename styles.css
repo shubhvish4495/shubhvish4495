@@ -1,0 +1,345 @@
+:root {
+    --primary-color: azure;
+    --secondary-color: #03dac6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --on-background: #ffffff;
+    --on-surface: #e0e0e0;
+    --accent-color: #ff4081;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--on-background);
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header nav"
+        "header main"
+        "footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 5px solid var(--primary-color);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 1rem 0 0.5rem;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+header p {
+    margin: 0 0 1rem;
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--on-surface);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color var(--transition-speed);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: var(--background-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    transition: background-color var(--transition-speed);
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--on-background);
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+}
+
+.skill-list li {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    transition: transform var(--transition-speed);
+}
+
+.skill-list li:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--on-background);
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--surface-color);
+    color: var(--on-surface);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: var(--surface-color);
+    color: var(--on-surface);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    color: var(--on-surface);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Theme switch styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    header {
+        height: auto;
+        position: static;
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .social-links {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Resume section styles */
+#resume {
+    text-align: left;
+}
+
+.download-btn {
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: var(--secondary-color);
+}
