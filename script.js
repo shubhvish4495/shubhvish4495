@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Theme switcher
-    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-    const currentTheme = localStorage.getItem('theme');
     const downloadBtn = document.getElementById('downloadResume');
     
     downloadBtn.addEventListener('click', function() {
         // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
-        const resumeUrl = 'path/to/your/resume.pdf';
+        const resumeUrl = 'https://drive.google.com/file/d/1Qp5aUPfTK_GDLp177RXsVU1dDY28NU4R/view?usp=sharing';
         
-        // Creating a temporary anchor element
-        const link = document.createElement('a');
-        link.href = resumeUrl;
-        link.setAttribute('download', 'Shubham_Saurav_Resume.pdf');
+        window.open(resumeUrl, '_blank');
+        // // Creating a temporary anchor element
+        // const link = document.createElement('a');
+        // link.href = resumeUrl;
+        // link.setAttribute('download', 'Shubham_Saurav_Resume.pdf');
         
-        // Simulating a click on the anchor element
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // // Simulating a click on the anchor element
+        // document.body.appendChild(link);
+        // link.click();
+        // document.body.removeChild(link);
     });
 
     // Experience card popup
