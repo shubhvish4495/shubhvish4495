@@ -18,6 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
         // document.body.removeChild(link);
     });
 
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
+    // Close mobile menu when a link is clicked
+    const mobileNavLinks = document.querySelectorAll('.nav-links a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+
     // Experience card popup
     const cards = document.querySelectorAll('.card');
     const popup = document.getElementById('popup');
