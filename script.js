@@ -1,38 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme switcher
     const downloadBtn = document.getElementById('downloadResume');
     
     downloadBtn.addEventListener('click', function() {
-        // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
         const resumeUrl = 'https://drive.google.com/file/d/1Qp5aUPfTK_GDLp177RXsVU1dDY28NU4R/view?usp=sharing';
-        
         window.open(resumeUrl, '_blank');
-        // // Creating a temporary anchor element
-        // const link = document.createElement('a');
-        // link.href = resumeUrl;
-        // link.setAttribute('download', 'Shubham_Saurav_Resume.pdf');
-        
-        // // Simulating a click on the anchor element
-        // document.body.appendChild(link);
-        // link.click();
-        // document.body.removeChild(link);
-    });
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        this.classList.toggle('active');
-    });
-
-    // Close mobile menu when a link is clicked
-    const mobileNavLinks = document.querySelectorAll('.nav-links a');
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
-        });
     });
 
     // Experience card popup
